@@ -49,10 +49,10 @@
 }
 
 /*↓↓↓下列代码用于控制鼠标悬浮状态控制（靠近标题状态栏）↓↓↓*/
-#zonglan a:hover {
+/*#zonglan a:hover {
     color: rgb(240, 149, 39);
     font-size: 15px;/*自动放大的倍数*/
-    font-family: 楷体;
+    /*font-family: 楷体;
 }
 
 /*↓↓↓鼠标按住未释放的状态↓↓↓*/
