@@ -5,9 +5,9 @@
 
 #hu {
     background-color: rgb(140, 228, 244);
-    height: 80px;
+    height: 80px;/*顶部导航栏宽度*/
     color: rgb(239, 91, 172);
-    text-indent: 5em;
+    text-indent: 10em;/*导航文字的左右位置*/
     line-height: 80px;
     /*上下移动*/
     font-family: 楷体;
