@@ -7,7 +7,8 @@
     background-color: rgb(140, 228, 244);
     height: 80px;/*顶部导航栏宽度*/
     color: rgb(239, 91, 172);
-    text-indent: 10em;/*导航文字的左右位置*/
+    text-align: center;/*设置居中*/
+    /*text-indent: 10em;/*导航文字的左右位置*/
     line-height: 80px;
     /*上下移动*/
     font-family: 楷体;
@@ -39,8 +40,8 @@
 }
 
 #zonglan a {
-    border-radius: 0 25px;
-    padding: 10px;
+    border-radius: 0 20px;
+    padding: 13px;
     color: rgb(25, 21, 238);
     background-color: #95e8d5;
     width: 100px;
@@ -50,7 +51,7 @@
 /*↓↓↓下列代码用于控制鼠标悬浮状态控制（靠近标题状态栏）↓↓↓*/
 #zonglan a:hover {
     color: rgb(240, 149, 39);
-    font-size: 25px;
+    font-size: 15px;/*自动放大的倍数*/
     font-family: 楷体;
 }
 
@@ -147,6 +148,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 20;/*将加载动画遮罩层浮于22个项目之上*/
   }
   
   .loader:before {
@@ -288,7 +290,10 @@
   
   .loader {
     display: inline-block;
-    margin: 0 16px;
+    margin: 0 50px;
   }
-  
+  #ditu {
+    text-align: center;
+
+  }
    
