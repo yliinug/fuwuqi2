@@ -131,8 +131,8 @@
 }
 /* From uiverse.io by @mobinkakei */
 .loader {
-    --path: #ef7ae1;
-    --dot: #ef7ae1;
+    --path: #ffffff;
+    --dot: #ffffff;
     --duration: 3s;
     width: 44px;
     height: 44px;
@@ -144,7 +144,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #7dafe2;
+    background-color: #03213f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,5 +295,14 @@
   #ditu {
     text-align: center;
 
+  }
+  .tongzhi {
+    background-image: linear-gradient(to right, #ed6a24, #e81a88, #57e434, #2584e9, #e915df, #12cfd9, #c973ff, #6cc6cb, #6469f6, #4ee2ec, #eebd89, #ee2b93, #ccfbff);
+    -webkit-background-clip: text;
+    animation: move 5s infinite;
+    color: transparent;
+    font-family: 楷体;
+    font-size: 20px;
+    margin: 0;
   }
    
