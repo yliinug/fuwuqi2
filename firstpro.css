@@ -1,10 +1,10 @@
 #zongti {
-    background-color: rgb(255, 191, 197);
+    background-color: #f4decb;
     margin: 0 2%;
 }
 
 #hu {
-    background-color: rgb(140, 228, 244);
+    background-color: #8ef3eb;
     height: 80px;/*顶部导航栏宽度*/
     color: rgb(239, 91, 172);
     text-align: center;/*设置居中*/
@@ -167,7 +167,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #03213f;
+    background-color: rgb(102, 103, 171);
     display: flex;
     justify-content: center;
     align-items: center;
