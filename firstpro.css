@@ -122,7 +122,7 @@
 }
 
 .copyright1 {
-  padding: 1em 0;
+  padding: 0.15em 0;
   /*黑色布条的宽度*/
   /*background:rgb(21, 20, 21);/*页面最低端黑色背景*/
   background-image: linear-gradient(to right, rgb(255, 191, 197), #57e434, #FFE4E1, #FFE4B5, rgb(255, 191, 197), #FFE4B5, #FFE4E1, #4ee2ec, rgb(255, 191, 197));
