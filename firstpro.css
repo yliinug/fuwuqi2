@@ -106,20 +106,43 @@
     /*background:rgb(21, 20, 21);/*页面最低端黑色背景*/
     background-image: linear-gradient(to right, rgb(255, 191, 197), #57e434, #6469f6, #480456, #35023b, #480456, #6469f6, #4ee2ec, rgb(255, 191, 197));
     /*上面代码应用则备注栏是渐变色，不应用就是黑色*/
+    /*background-image: linear-gradient(to right, rgb(255, 191, 197), #57e434, #FFE4E1, #FFE4B5, rgb(255, 191, 197), #FFE4B5, #FFE4E1, #4ee2ec, rgb(255, 191, 197));*/
     text-align: center;
 }
-
 .copyright p {
-    /*字体设置*/
-    /*color: rgb(238, 244, 240);*/
-    background-image: linear-gradient(to right, #ed6a24, #e81a88, #57e434, #2584e9, #e915df, #12cfd9, #c973ff, #6cc6cb, #6469f6, #4ee2ec, #eebd89, #ee2b93, #ccfbff);
-    -webkit-background-clip: text;
-    animation: move 5s infinite;
-    color: transparent;
-    font-family: 楷体;
-    font-size: 20px;
-    margin: 0;
+  /*字体设置*/
+  /*color: rgb(238, 244, 240);*/
+  background-image: linear-gradient(to right, #ed6a24, #e81a88, #57e434, #2584e9, #e915df, #12cfd9, #c973ff, #6cc6cb, #6469f6, #4ee2ec, #eebd89, #ee2b93, #ccfbff);
+  -webkit-background-clip: text;
+  animation: move 5s infinite;
+  color: transparent;
+  font-family: 楷体;
+  font-size: 20px;
+  margin: 0;
 }
+
+.copyright1 {
+  padding: 1em 0;
+  /*黑色布条的宽度*/
+  /*background:rgb(21, 20, 21);/*页面最低端黑色背景*/
+  background-image: linear-gradient(to right, rgb(255, 191, 197), #57e434, #FFE4E1, #FFE4B5, rgb(255, 191, 197), #FFE4B5, #FFE4E1, #4ee2ec, rgb(255, 191, 197));
+  /*上面代码应用则备注栏是渐变色，不应用就是黑色*/
+  text-align: center;
+}
+
+.copyright1 p {
+  /*字体设置*/
+  /*color: rgb(238, 244, 240);*/
+  background-image: linear-gradient(to right, #ed6a24, #e81a88, #57e434, #2584e9, #e915df, #12cfd9, #c973ff, #6cc6cb, #6469f6, #4ee2ec, #eebd89, #ee2b93, #ccfbff);
+  -webkit-background-clip: text;
+  animation: move 5s infinite;
+  color: transparent;
+  font-family: 楷体;
+  font-size: 20px;
+  margin: 0;
+}
+
+
 
 .copyright p a {
     color: rgb(240, 241, 233);
@@ -305,4 +328,9 @@
     font-size: 20px;
     margin: 0;
   }
+  .image {
+    width: 3000px;
+    height: 20000px;
+    background: url(1.gif) no-repeat center;
+  }/*引入gif图
    
