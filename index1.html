@@ -7,10 +7,96 @@
 	<script src="yinghuapiaoluo.js"></script>
 	<title>🌻英杰的小屋🌼,,ԾㅂԾ,,</title>
 	<link rel="stylesheet" type="text/css" href="firstpro.css" />
+	<link rel="stylesheet" type="text/css" href="waifu.min.css?v=1.4.2" />
 	<div class="spinner"></div>
+	<style>
+		.arrow {
+			border: 9px solid transparent;
+			/*小箭头三角大小*/
+			border-bottom-color: #edf951;
+			width: 0px;
+			height: 0px;
+			top: 0px
+		}
+
+		.stick {
+			width: 8px;
+			height: 14px;
+			border-radius: 1px;
+			/*箭头柄大小*/
+			background-color: #e8eb5b;
+			top: 15px;
+		}
+
+		#back_top div {
+			position: absolute;
+			margin: auto;
+			right: 0px;
+			/*箭头整体平移左*/
+			left: 0px;
+			/*右*/
+		}
+
+		#back_top {
+			background-color: #0c8e14;
+			height: 45px;
+			width: 45px;
+			border-radius: 6px;
+			/*小方块圆滑度*/
+			display: block;
+			cursor: pointer;
+			position: fixed;
+			right: 50px;
+			bottom: 100px;
+			display: none;
+		}
+	</style>
 </head>
 
 <body>
+	<div id="article"></div>
+	<div id="back_top">
+		<div class="arrow"></div>
+		<div class="stick"></div>
+	</div>
+	<script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
+	<!--
+    <script>
+$(function(){
+    for(var i =0 ;i <100;i++){
+        $("#article").append("<p>哈哈哈哈哈哈哈<br></p>")
+    }
+ 
+})
+</script>
+-->
+	<script>
+		$(function () {
+
+			$(window).scroll(function () {  //只要窗口滚动,就触发下面代码
+
+				var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度
+
+				if (scrollt > 200) {  //判断滚动后高度超过200px,就显示
+
+					$("#back_top").fadeIn(1000); //淡入
+
+				} else {
+
+					$("#back_top").stop().fadeOut(1000); //如果返回或者没有超过,就淡出.必须加上stop()停止之前动画,否则会出现闪动
+
+				}
+
+			});
+
+			$("#back_top").click(function () { //当点击标签的时候,使用animate在600毫秒的时间内,滚到顶部
+
+				$("html,body").animate({ scrollTop: "0px" }, 3000);
+
+			});
+
+		});
+	</script>
 	<script>
 		var stop, staticx; // eslint-disable-line no-unused-vars
 		var img = new Image();
@@ -24,7 +110,7 @@
 			this.fn = fn;
 		}
 
-		Sakura.prototype.draw = function(cxt) {
+		Sakura.prototype.draw = function (cxt) {
 			cxt.save();
 			var xc = 40 * this.s / 4;
 			cxt.translate(this.x, this.y);
@@ -33,17 +119,17 @@
 			cxt.restore();
 		}
 
-		Sakura.prototype.update = function() {
+		Sakura.prototype.update = function () {
 			this.x = this.fn.x(this.x, this.y);
 			this.y = this.fn.y(this.y, this.y);
 			this.r = this.fn.r(this.r);
-			if(this.x > window.innerWidth ||
+			if (this.x > window.innerWidth ||
 				this.x < 0 ||
 				this.y > window.innerHeight ||
 				this.y < 0
 			) {
 				this.r = getRandom('fnr');
-				if(Math.random() > 0.4) {
+				if (Math.random() > 0.4) {
 					this.x = getRandom('x');
 					this.y = 0;
 					this.s = getRandom('s');
@@ -57,32 +143,32 @@
 			}
 		}
 
-		SakuraList = function() {
+		SakuraList = function () {
 			this.list = [];
 		}
-		SakuraList.prototype.push = function(sakura) {
+		SakuraList.prototype.push = function (sakura) {
 			this.list.push(sakura);
 		}
-		SakuraList.prototype.update = function() {
-			for(var i = 0, len = this.list.length; i < len; i++) {
+		SakuraList.prototype.update = function () {
+			for (var i = 0, len = this.list.length; i < len; i++) {
 				this.list[i].update();
 			}
 		}
-		SakuraList.prototype.draw = function(cxt) {
-			for(var i = 0, len = this.list.length; i < len; i++) {
+		SakuraList.prototype.draw = function (cxt) {
+			for (var i = 0, len = this.list.length; i < len; i++) {
 				this.list[i].draw(cxt);
 			}
 		}
-		SakuraList.prototype.get = function(i) {
+		SakuraList.prototype.get = function (i) {
 			return this.list[i];
 		}
-		SakuraList.prototype.size = function() {
+		SakuraList.prototype.size = function () {
 			return this.list.length;
 		}
 
 		function getRandom(option) {
 			var ret, random;
-			switch(option) {
+			switch (option) {
 				case 'x':
 					ret = Math.random() * window.innerWidth;
 					break;
@@ -97,19 +183,19 @@
 					break;
 				case 'fnx':
 					random = -0.5 + Math.random() * 1;
-					ret = function(x, y) {
+					ret = function (x, y) {
 						return x + 0.5 * random - 1.7;
 					};
 					break;
 				case 'fny':
 					random = 1.5 + Math.random() * 0.7
-					ret = function(x, y) {
+					ret = function (x, y) {
 						return y + random;
 					};
 					break;
 				case 'fnr':
 					random = Math.random() * 0.03;
-					ret = function(r) {
+					ret = function (r) {
 						return r + random;
 					};
 					break;
@@ -134,7 +220,7 @@
 			document.getElementsByTagName('body')[0].appendChild(canvas);
 			cxt = canvas.getContext('2d');
 			var sakuraList = new SakuraList();
-			for(var i = 0; i < 50; i++) {
+			for (var i = 0; i < 50; i++) {
 				var sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny;
 				randomX = getRandom('x');
 				randomY = getRandom('y');
@@ -151,7 +237,7 @@
 				sakura.draw(cxt);
 				sakuraList.push(sakura);
 			}
-			stop = requestAnimationFrame(function() {
+			stop = requestAnimationFrame(function () {
 				cxt.clearRect(0, 0, canvas.width, canvas.height);
 				sakuraList.update();
 				sakuraList.draw(cxt);
@@ -159,18 +245,18 @@
 			})
 		}
 
-		window.onresize = function() {
+		window.onresize = function () {
 			var canvasSnow = document.getElementById('canvas_sakura');
 			canvasSnow.width = window.innerWidth;
 			canvasSnow.height = window.innerHeight;
 		}
 
-		img.onload = function() {
+		img.onload = function () {
 			startSakura();
 		}
 
 		function stopp() {
-			if(staticx) {
+			if (staticx) {
 				var child = document.getElementById("canvas_sakura");
 				child.parentNode.removeChild(child);
 				window.cancelAnimationFrame(stop);
@@ -179,7 +265,7 @@
 				startSakura();
 			}
 		}
-</script>
+	</script>
 
 	<!--<div class="loader-wrapper">
 		<div class="loader">

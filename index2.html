@@ -7,10 +7,96 @@
 	<script src="yinghuapiaoluo.js"></script>
 	<title>🌻英杰的小屋🌼,,ԾㅂԾ,,</title>
 	<link rel="stylesheet" type="text/css" href="firstpro.css" />
+	<link rel="stylesheet" type="text/css" href="waifu.min.css?v=1.4.2" />
 	<div class="spinner"></div>
+	<style>
+		.arrow {
+			border: 9px solid transparent;
+			/*小箭头三角大小*/
+			border-bottom-color: #edf951;
+			width: 0px;
+			height: 0px;
+			top: 0px
+		}
+
+		.stick {
+			width: 8px;
+			height: 14px;
+			border-radius: 1px;
+			/*箭头柄大小*/
+			background-color: #e8eb5b;
+			top: 15px;
+		}
+
+		#back_top div {
+			position: absolute;
+			margin: auto;
+			right: 0px;
+			/*箭头整体平移左*/
+			left: 0px;
+			/*右*/
+		}
+
+		#back_top {
+			background-color: #0c8e14;
+			height: 45px;
+			width: 45px;
+			border-radius: 6px;
+			/*小方块圆滑度*/
+			display: block;
+			cursor: pointer;
+			position: fixed;
+			right: 50px;
+			bottom: 100px;
+			display: none;
+		}
+	</style>
 </head>
 
 <body>
+	<div id="article"></div>
+	<div id="back_top">
+		<div class="arrow"></div>
+		<div class="stick"></div>
+	</div>
+	<script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
+	<!--
+    <script>
+$(function(){
+    for(var i =0 ;i <100;i++){
+        $("#article").append("<p>哈哈哈哈哈哈哈<br></p>")
+    }
+ 
+})
+</script>
+-->
+	<script>
+		$(function () {
+
+			$(window).scroll(function () {  //只要窗口滚动,就触发下面代码
+
+				var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度
+
+				if (scrollt > 200) {  //判断滚动后高度超过200px,就显示
+
+					$("#back_top").fadeIn(1000); //淡入
+
+				} else {
+
+					$("#back_top").stop().fadeOut(1000); //如果返回或者没有超过,就淡出.必须加上stop()停止之前动画,否则会出现闪动
+
+				}
+
+			});
+
+			$("#back_top").click(function () { //当点击标签的时候,使用animate在600毫秒的时间内,滚到顶部
+
+				$("html,body").animate({ scrollTop: "0px" }, 3000);
+
+			});
+
+		});
+	</script>
 
 	<div class="loader-wrapper">
 		<div class="loader">
