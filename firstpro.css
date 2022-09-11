@@ -348,28 +348,29 @@
 
 /*引入gif图*/
 body {
-    position: relative;
+  position: relative;
 }
+
 .scroll_fixed {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(to right top, #0089f2 50%, transparent 50%) no-repeat;
-    background-size: calc(100% + 5px) calc(100% - 100vh + 17px);
-    z-index: 5;
-    pointer-events: none;
-    mix-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right top, #00f24d 50%, transparent 50%) no-repeat;
+  background-size: calc(100% + 5px) calc(100% - 100vh + 29px);
+  z-index: 5;
+  pointer-events: none;
+  mix-blend-mode: darken;
 }
+
 .scroll_fixed::after {
-    content: '';
-    position: fixed;
-    top: 5px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: #fff;
-    z-index: 1;
+  content: '';
+  position: fixed;
+  top: 5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  z-index: 15;
 }
-  

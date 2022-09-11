@@ -12,6 +12,65 @@
 		<span></span>
 	</div>
 	<style>
+		body {
+			/*background: hsl(0deg, 0%, 10%);*/
+			color: rgb(29, 219, 70);
+		}
+
+		main {
+			width: 100vw;
+			max-width: 100%;
+			height: 100vh;
+			display: grid;
+			place-items: center;
+		}
+
+		main>div {
+			max-width: 700px;
+			padding: 24px;
+		}
+
+		p {
+			line-height: 1.5em;
+		}
+
+		body::-webkit-scrollbar {
+			width: 15px;
+			/*滚动条宽度*/
+			background: linear-gradient(to bottom,
+					hsl(0deg, 100%, 50%, 0.4) 0%,
+					hsl(40deg, 100%, 50%) 20%,
+					hsl(80deg, 100%, 50%) 30%,
+					hsl(120deg, 100%, 50%) 40%,
+					hsl(180deg, 100%, 50%) 50%,
+					hsl(250deg, 100%, 50%) 80%,
+					hsl(320deg, 100%, 50%, 0.4) 100%);
+			border-radius: 40px;
+			/*滚动条上下圆角*/
+		}
+
+		body::-webkit-scrollbar-thumb {
+			background: linear-gradient(to bottom,
+					hsl(0deg, 100%, 50%, 0) 0%,
+					rgba(70, 243, 243, 0.982) 20%,
+					rgb(242, 105, 160) 80%,
+					hsl(0deg, 100%, 50%, 0) 100%);
+			border-radius: 20%;
+		}
+
+		/* 标准的 scroll bar 属性，还未发布 */
+		/* body {
+		  scrollbar-color: black;
+		  scrollbar-width: thin | auto | none; 
+		} */
+
+		/* IE */
+		/* body {
+		  scrollbar-face-color: #00ff00;
+		  scrollbar-track-color: #ff0000;
+		} */
+	</style>
+	<style>
 		.arrow {
 			border: 9px solid transparent;
 			/*小箭头三角大小*/
@@ -56,7 +115,8 @@
 </head>
 
 <body>
-	<div class="scroll_fixed"></div><!--页面顶部的查看进度条-->
+	<div class="scroll_fixed"></div>
+	<!--页面顶部的查看进度条-->
 
 	<body oncontextmenu="return false"></body>
 	<!--禁止右键菜单-->
