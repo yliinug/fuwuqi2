@@ -136,16 +136,21 @@
 .fangke {
   /*字体设置*/
   /*color: rgb(238, 244, 240);*/
-  background-image: linear-gradient(to right, #ed6a24, #e81a88, #57e434, #2584e9, #e915df, #12cfd9, #c973ff, #6cc6cb, #6469f6, #4ee2ec, #eebd89, #ee2b93, #ccfbff);
+  background-image: linear-gradient(to right, #2584e9, #e915df,  #c973ff,  #6469f6,   #ee2b93);
   -webkit-background-clip: text;
   animation: move 5s infinite;
   color: transparent;
   font-family: 楷体;
-  font-size: 10px;
+  font-size: 23px;
   /*字体大小*/
   margin: 0;
+  text-align: 100px;
+  line-height: center;
+  /*设置居中*/
 }
-
+.author {
+  text-align: 10000px;
+}
 
 
 .copyright p a {
